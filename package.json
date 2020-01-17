@@ -1,0 +1,27 @@
+{
+  "name": "Homework-6",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/b-bryant18/Homework-6-Developer-Profile-Generator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/b-bryant18/Homework-6-Developer-Profile-Generator/issues"
+  },
+  "homepage": "https://github.com/b-bryant18/Homework-6-Developer-Profile-Generator#readme",
+  "dependencies": {
+    "axios": "^0.19.1",
+    "dotenv": "^8.2.0",
+    "fs": "0.0.1-security",
+    "html-pdf": "^2.2.0",
+    "inquirer": "^7.0.3"
+  }
+}
