@@ -49,6 +49,12 @@ function generateHTML(userInput, response, responseStars, profileImg, githubUser
     <title>${userInput.username}</title>
 </head>
 
+<body class = "wrapper">
+<div class="col">
+<header>
+<div class ="photo-header">
+<div class="row"><img src=${profileImg}" alt="profile-img">
+</div>
 <body>
     <div class="container">
             <img src="" alt="Profile Image">
