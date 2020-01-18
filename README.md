@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 # Developer Profile Generator
 
 This program is used to create and populate an HTML and PDF file from a user's Github profile. 
@@ -15,16 +13,28 @@ Enter a GitHub profile name and favorite color
 Your profile will generate an HTML and PDF
 ```
 
-## Usage
+## Details
 
 ```python
-import foobar
+The newly generated PDF will contain: 
 
-foobar.pluralize('word') # returns 'words'
-foobar.pluralize('goose') # returns 'geese'
-foobar.singularize('phenomena') # returns 'phenomenon'
+Profile image
+User name
+Links to the following:
+User location via Google Maps
+User GitHub profile
+User blog
+User bio
+Number of public repositories
+Number of followers
+Number of GitHub stars
+Number of users following
 ```
 
-## Details
-Then the user will be asked for their favorite color. The PDF file generated will contain the user's github information and the background of that file will be stylized with their favorite color. 
->>>>>>> 77bac3eca7ccc207c05e6e1650c8a25c254b326e
+## Business Context
+
+Developers will not have to log into their individual Github accounts in order to show their repositories and display their information to shareholders. Instead they can run this program and have a PDF file with all of their information ready to go in a matter of seconds.
+
+```
+
+
