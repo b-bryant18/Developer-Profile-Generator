@@ -1,43 +1,36 @@
-const colors = {
-    red: {
-        wrapperBackground: "#re#43291Fd",
-        headerBackground: "#870603",
-        headerColor: "white",
-        photoBorderColor: "#226F54"
-    },
-    orange: {
-        wrapperBackground: "",
-        headerBackground: "",
-        headerColor: "white",
-        photoBorderColor: ""
-    },
-    yellow: {
-        wrapperBackground: "",
-        headerBackground: "",
-        headerColor: "white",
-        photoBorderColor: ""
-    },
-    green: {
-        wrapperBackground: "#27512C",
-        headerBackground: "#5BAD62",
-        headerColor: "white",
-        photoBorderColor: "#FFA987"
-    },
-    blue: {
-        wrapperBackground: "#2081C3",
-        headerBackground: "#101D42",
-        headerColor: "white",
-        photoBorderColor: "#73448C"
-    },
-    purple: {
-        wrapperBackground: "",
-        headerBackground: "",
-        headerColor: "white",
-        photoBorderColor: ""
-    }
-};
 
-function generateHTML(userInput, response, responseStars, profileImg, githubUsername, userCity, userGithubProfileURL, userblogURL, userBio, numberOfRepos, numberOfFollowers, numberOfUsersFollowing, userCompany) {
+const colors = {
+        green: {
+          wrapperBackground: "#E6E1C3",
+          headerBackground: "#C1C72C",
+          headerColor: "black",
+          photoBorderColor: "#black"
+        },
+        blue: {
+          wrapperBackground: "#5F64D3",
+          headerBackground: "#26175A",
+          headerColor: "white",
+          photoBorderColor: "#73448C"
+        },
+        pink: {
+          wrapperBackground: "#879CDF",
+          headerBackground: "#FF8374",
+          headerColor: "white",
+          photoBorderColor: "#FEE24C"
+        },
+        red: {
+          wrapperBackground: "#DE9967",
+          headerBackground: "#870603",
+          headerColor: "white",
+          photoBorderColor: "white"
+        }
+      };
+/*
+ data.color
+*/
+//, responseStars, profileImg, githubUsername, userCity, userGithubProfileURL, userblogURL, userBio, numberOfRepos, numberOfFollowers, numberOfUsersFollowing, userCompany
+
+function generateHTML(response) {
     return `
     <!DOCTYPE html>
     <html lang="en">
@@ -45,7 +38,7 @@ function generateHTML(userInput, response, responseStars, profileImg, githubUser
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>${userInput.username}</title>
+        <title>Profile Generator</title>
         <style>
         @page {
             margin: 0;
@@ -76,6 +69,8 @@ function generateHTML(userInput, response, responseStars, profileImg, githubUser
             margin: 0;
         }
         h1 {
+            background-color: ${colors[data.color].headerBackground}
+            color: ${colors[data.color].headerColor}
             font-size: 3em;
         }
         h2 {
@@ -236,18 +231,6 @@ function generateHTML(userInput, response, responseStars, profileImg, githubUser
                 </div>
     
         </div>
-        <div class="bottom-half">
-            <!-- User Blog -->
-            <!-- User Bio -->
-            <div class="row">
-                <div class="col-md-6"> Number of public repos </div>
-                <div class="col-md-6"> Number of followers </div>
-                <div class="row">
-                    <div class="col-md-6"> Number of github stars </div>
-                    <div class="col-md-6"> Number of users following </div>
-                </div>
-            </div>
-        </div>
     
         // <!-- closes row -->
         </div>
@@ -261,4 +244,7 @@ function generateHTML(userInput, response, responseStars, profileImg, githubUser
     </html>`
 }
 
-module.exports = generateHTML;
+module.exports = {
+    colors: colors,
+    generateHTML: generateHTML
+};
