@@ -35,6 +35,4 @@ Number of users following
 ```
 Developers will not have to log into their individual Github accounts in order to show their repositories and display their information to shareholders. Instead they can run this program and have a PDF file with all of their information ready to go in a matter of seconds.
 
-```
-
 
